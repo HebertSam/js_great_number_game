@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>Welcome to the Great Number Game</h1>
+        <h2>I am thinking of a number between 1 and 100</h2>
+        <h2>Take a guess!</h2>
+        <form action="/guess" method="post">
+        <input type="text" name="guess">
+        <button type="submit">Submit</button>
+        </form>
+
+        <% if (data.guess === data.number) {%>
+            <h4>Thats Right!!</h4>
+        <%} else if (data.guess > data.number) {%>
+            <h4>too high</h4>
+        <%} else if (data.guess < data.number) {%>
+            <h4>too low</h4>
+        <%}%>
+
+        <a href="/reset">play again</a>
+    </body>
+</html>
